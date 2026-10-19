@@ -1,0 +1,1175 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EMPOWER Agency – карьерное и академическое развитие</title>
+<meta name="description" content="Агентство карьерного и академического развития: поступление, стажировки, форумы, наставничество. Подбор услуги за 3 вопроса.">
+<meta property="og:title" content="EMPOWER Agency">
+<meta property="og:description" content="С нас стратегия. С тебя действие. Услуги, цены, кейсы и подбор услуги за 3 вопроса.">
+<meta property="og:image" content="img/notebook.jpg">
+<link rel="icon" href="img/mono-red.png">
+<style>[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,400;1,6..96,500&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700&display=swap">
+<style>
+/* Layout: светлый бумажный фон, красные плашки и «папки» услуг. Порядок: первый экран → о нас → услуги по вкладкам аудиторий → подбор → наставничество (красная полоса) → Opportunities (синяя полоса) → отзывы → вопросы. Один фирменный светлый стиль. */
+:root{
+  --red:#AC0E00;
+  --red-deep:#8A0B00;
+  --red-soft:#F6E4E1;
+  --paper:#F3F1EE;
+  --white:#FFFFFF;
+  --ink:#1D1A19;
+  --ink-2:#2B2725;
+  --muted:#6B6461;
+  --line:#E3DEDA;
+  --blue:#2A238D;
+  --blue-deep:#201A70;
+  --sky:#BDB8F4;
+  --display:"Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --serif:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --r:16px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--display);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--white)}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:96px}
+@media (max-width:700px){section{padding-block:64px}}
+
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+.h2{font-weight:900;text-transform:uppercase;font-size:clamp(30px,4.6vw,54px);line-height:1.02;letter-spacing:-.01em}
+.lead{font-size:clamp(16px,1.6vw,19px);font-style:italic;color:var(--muted);max-width:60ch}
+.mark{display:inline-block;background:var(--red);color:var(--white);padding:.02em .22em .06em;line-height:1.05}
+.mark.inv{background:var(--white);color:var(--red)}
+.sec-head{display:grid;gap:18px;margin-bottom:44px;max-width:820px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:700 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .15s,color .15s}
+.btn:hover{transform:translateY(-1px)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.btn-red{background:var(--red);color:var(--white)}
+.btn-red:hover{background:var(--red-deep)}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:var(--white)}
+.btn-white{background:var(--white);color:var(--red)}
+.btn-ghost-w{border-color:rgba(255,255,255,.7);color:var(--white);background:transparent}
+.btn-ghost-w:hover{background:var(--white);color:var(--red)}
+.arrow{font-size:16px;letter-spacing:0}
+.pill{display:inline-flex;align-items:center;height:32px;padding:0 14px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.04em;border:1.5px solid var(--red);color:var(--red);background:var(--white);white-space:nowrap}
+.pill.f{background:var(--red);color:var(--white)}
+.arr{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.arr li{position:relative;padding-left:22px;font-size:14.5px}
+.arr li::before{content:"→";position:absolute;left:0;color:var(--red);font-weight:700}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:24px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.brand img{width:44px;mix-blend-mode:multiply}
+.brand span{font-size:11px;font-weight:500;letter-spacing:.42em;line-height:1.35;text-transform:uppercase}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{font-size:13px;font-weight:600;text-decoration:none;color:var(--ink-2);white-space:nowrap;padding:8px 10px;border-radius:999px;transition:background .15s,color .15s}
+.nav a:hover{color:var(--red)}
+.nav a.on{background:var(--red-soft);color:var(--red)}
+.top .btn{min-height:42px;padding:0 20px;font-size:11px;flex:none}
+.mnav{display:none;position:relative}
+.mnav summary{list-style:none;cursor:pointer;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:18px;line-height:1}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav[open] summary{background:var(--ink);color:var(--white)}
+.mnav nav{position:absolute;right:0;top:52px;background:var(--white);border:1px solid var(--line);border-radius:14px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3);padding:8px;display:grid;min-width:220px}
+.mnav nav a{padding:12px 14px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px}
+.mnav nav a:hover,.mnav nav a.on{background:var(--red-soft);color:var(--red)}
+@media (max-width:1100px){.nav{display:none}.mnav{display:block;margin-left:auto}}
+@media (max-width:440px){.brand span{display:none}.top .btn{padding:0 14px}}
+
+/* hero */
+.hero{padding-block:64px 88px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-weight:900;text-transform:uppercase;font-size:clamp(40px,6.4vw,84px);line-height:.98;letter-spacing:-.015em;margin-top:22px}
+.hero h1 .mark{margin-top:.12em}
+.hero .about{margin-top:28px;font-size:clamp(16px,1.6vw,19px);color:var(--ink-2);max-width:56ch}
+.hero .about b{font-weight:700}
+.who{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.who a{text-decoration:none}
+.who a:hover{background:var(--red);color:var(--white)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-nb{position:relative;display:grid;min-width:0;perspective:1600px}
+.nb-page,.nb-cover{grid-area:1/1}
+.nb-page{position:relative;border-radius:22px;background-color:var(--white);background-image:linear-gradient(rgba(172,14,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(172,14,0,.06) 1px,transparent 1px);background-size:24px 24px;border:1px solid var(--line);padding:clamp(22px,4vw,40px);display:flex;flex-direction:column;gap:10px;box-shadow:0 40px 80px -50px rgba(60,20,10,.45);border-left:10px solid var(--red)}
+.nb-k{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.nb-t{font-weight:900;text-transform:uppercase;font-size:clamp(26px,3vw,38px);line-height:1;color:var(--red)}
+.nb-s{font-size:14.5px;color:var(--ink-2);max-width:36ch}
+.nb-opts{display:grid;gap:8px;margin-top:8px}
+.nb-opts button{display:flex;align-items:center;gap:12px;text-align:left;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--white);font:600 14.5px var(--display);color:var(--ink);cursor:pointer;transition:border-color .12s,background .12s}
+.nb-opts button:hover{border-color:var(--red);background:var(--red-soft)}
+.nb-opts i{font-style:normal;flex:none;width:24px;height:24px;border:2px solid var(--red);border-radius:6px}
+.nb-close{margin-top:auto;padding-top:8px!important;align-self:flex-start;background:none;border:0;padding:4px 0;font:600 12px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer}
+.nb-cover{position:relative;aspect-ratio:1/1;width:100%;border:0;padding:0;border-radius:22px;overflow:hidden;background:#E7E6E5;cursor:pointer;transform-origin:left center;transition:transform .9s cubic-bezier(.6,.05,.25,1),opacity .5s .4s;backface-visibility:hidden}
+.nb-cover img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.nb-cover:hover img{transform:scale(1.03)}
+.nb-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--red);font:700 12px var(--display);letter-spacing:.16em;text-transform:uppercase;padding:12px 18px;border-radius:999px;box-shadow:0 12px 26px -12px rgba(60,20,10,.5);white-space:nowrap;animation:nbPulse 2.4s ease-in-out infinite}
+@keyframes nbPulse{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-4px)}}
+.hero-nb.open .nb-cover{transform:rotateY(-115deg);opacity:0;pointer-events:none}
+.hero-nb:not(.open) .nb-page{visibility:hidden}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-nb{max-width:460px}}
+
+/* about */
+.about-sec{background:var(--white);border-block:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:28px}}
+.quote{font-size:clamp(20px,2.4vw,28px);font-weight:800;line-height:1.25;text-transform:uppercase;margin-top:28px}
+.quote em{font-weight:500;color:var(--red)}
+.about-side p{font-size:16px;color:var(--ink-2)}
+.about-side p + p{margin-top:12px}
+.values{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
+@media (max-width:960px){.ex-grid{grid-template-columns:1fr}}
+.ex{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);background:var(--red);color:var(--white);border-radius:22px;overflow:hidden}
+.ex img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.ex-b{padding:28px 26px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.ex-b h3{font-size:clamp(24px,2.8vw,32px);font-weight:900;text-transform:uppercase;line-height:1}
+.ex-b .role{font-style:italic;opacity:.9;font-size:14px;margin-top:-6px}
+.ex-b ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ex-b li{position:relative;padding-left:20px;font-size:13.5px;font-weight:600;line-height:1.45}
+.ex-b li::before{content:"→";position:absolute;left:0;font-weight:700}
+@media (max-width:560px){.ex{grid-template-columns:1fr}.ex img{aspect-ratio:4/5;height:auto}}
+
+/* gallery carousel */
+.gal{margin-top:80px}
+.band{position:relative;margin:0;height:clamp(340px,52vw,620px);overflow:hidden;background:var(--ink)}
+.band img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,26,25,0) 45%,rgba(29,26,25,.78) 100%)}
+.band figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;color:var(--white);padding-block:0 34px;display:grid;gap:6px}
+.band b{font-size:clamp(22px,3vw,38px);font-weight:900;text-transform:uppercase;line-height:1.05}
+.band figcaption span{font-style:italic;font-size:15px;opacity:.9}
+.band .band-k{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;opacity:1;justify-self:start;background:var(--red);padding:6px 10px}
+/* cases: папка */
+.cs-tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-left:18px}
+.cs-tabs::-webkit-scrollbar{display:none}
+.cs-tab{flex:none;display:flex;align-items:baseline;gap:10px;padding:14px 20px 12px;border:0;border-radius:14px 14px 0 0;background:#E4DFDB;font:inherit;color:var(--ink-2);cursor:pointer;transition:background .15s}
+.cs-tab:hover{background:#DAD3CE}
+.cs-tab i{font-style:normal;font-family:var(--serif);font-size:15px;color:var(--red)}
+.cs-tab b{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.cs-tab[aria-selected="true"]{background:var(--red);color:var(--white)}
+.cs-tab[aria-selected="true"] i{color:var(--white)}
+.cs-panel{background:var(--red);color:var(--white);border-radius:22px;padding:10px;position:relative;scroll-margin-top:90px}
+.cs-sheet{background:var(--white);color:var(--ink);border-radius:16px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);overflow:hidden}
+.cs-left{padding:34px 34px 30px;display:flex;flex-direction:column;gap:18px;border-right:1px dashed var(--line);min-width:0}
+.cs-kind{font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--red)}
+.cs-left h3{font-size:clamp(28px,3.4vw,44px);font-weight:900;text-transform:uppercase;line-height:.98}
+.cs-big{font-family:var(--serif);font-weight:500;font-size:clamp(54px,7vw,96px);line-height:.9;color:var(--red);letter-spacing:-.02em}
+.cs-big small{display:block;font-family:var(--display);font-size:14px;letter-spacing:0;color:var(--muted);margin-top:10px;line-height:1.4}
+.cs-a{margin-top:auto;padding:18px 20px;background:var(--paper);border-radius:12px;position:relative}
+.cs-a::before{content:"Точка А";display:block;font-size:10.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.cs-a p{font-size:14.5px;font-style:italic;color:var(--ink-2)}
+.cs-right{padding:34px 34px 30px;display:grid;gap:26px;align-content:start;min-width:0}
+.cs-right h4{font-size:10.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.cs-steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:cs}
+.cs-steps li{counter-increment:cs;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px}
+.cs-steps li:first-child{border-top:0;padding-top:0}
+.cs-steps li::before{content:"0" counter(cs);font-family:var(--serif);font-style:italic;font-size:18px;color:var(--red);line-height:1.2}
+.cs-res{list-style:none;margin:0;padding:18px 20px;background:var(--red-soft);border-radius:12px;display:grid;gap:10px}
+.cs-res li{position:relative;padding-left:30px;font-size:14.5px}
+.cs-res li::before{content:"";position:absolute;left:0;top:1px;width:18px;height:18px;border:2px solid var(--red);border-radius:5px;background:var(--white)}
+.cs-res li::after{content:"";position:absolute;left:6px;top:3px;width:5px;height:10px;border:solid var(--red);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.cs-res b{color:var(--red)}
+.cs-nav{display:flex;justify-content:space-between;align-items:center;padding:12px 14px 4px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.cs-nav button{background:none;border:1.5px solid rgba(255,255,255,.7);color:var(--white);border-radius:999px;padding:8px 14px;font:700 11px var(--display);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.cs-nav button:hover{background:var(--white);color:var(--red)}
+.cs-nav span{white-space:nowrap}
+@media (max-width:480px){.cs-nav{font-size:10.5px;letter-spacing:.12em;gap:8px}.cs-nav button{padding:8px 10px}}
+@media (max-width:900px){.cs-sheet{grid-template-columns:1fr}.cs-left{border-right:0;border-bottom:1px dashed var(--line)}.cs-left,.cs-right{padding:24px 20px}}
+.gal-h{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}
+.gal-h h3{font-weight:900;text-transform:uppercase;font-size:clamp(20px,2.2vw,26px)}
+.gal-nav{display:flex;gap:8px}
+.round{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--ink);background:var(--white);font:600 18px var(--display);cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.round:hover{background:var(--ink);color:var(--white)}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:none;scroll-snap-align:start;margin:0;border:0;padding:0;background:none;cursor:zoom-in;text-align:left;font:inherit;color:inherit}
+.slide img{height:380px;width:auto;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+.slide.w img{aspect-ratio:3/2}
+.slide span{display:block;margin-top:8px;font-size:13px;font-style:italic;color:var(--muted)}
+@media (max-width:600px){.slide img{height:300px}}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(20,16,15,.92);display:grid;grid-template-rows:minmax(0,1fr) auto;padding:calc(20px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb[hidden],[hidden]{display:none!important}
+.lb img{max-height:100%;max-width:100%;margin:auto;border-radius:10px;object-fit:contain;min-height:0}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--white);padding-top:14px}
+.lb-bar p{font-style:italic;font-size:14px}
+.lb .round{background:transparent;color:var(--white);border-color:rgba(255,255,255,.6)}
+.lb .round:hover{background:var(--white);color:var(--ink)}
+.lb-ctrl{display:flex;gap:8px}
+
+/* services */
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.tab{display:flex;align-items:center;gap:14px;padding:16px;border:1.5px solid var(--line);border-radius:var(--r);background:var(--white);font:inherit;color:inherit;text-align:left;cursor:pointer;transition:border-color .15s,background .15s}
+.tab:hover{border-color:var(--red)}
+.tab .ic{flex:none;width:52px;height:52px;border-radius:14px;background:var(--red-soft);display:grid;place-items:center;color:var(--red)}
+.tab svg{width:28px;height:28px}
+.tab b{display:block;font-size:14px;font-weight:800;text-transform:uppercase;line-height:1.2}
+.tab small{display:block;font-size:12.5px;color:var(--muted);margin-top:3px}
+.tab[aria-selected="true"]{background:var(--red);border-color:var(--red);color:var(--white)}
+.tab[aria-selected="true"] .ic{background:var(--white)}
+.tab[aria-selected="true"] small{color:rgba(255,255,255,.85)}
+@media (max-width:1020px){.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.tabs{grid-template-columns:1fr}}
+.tab > span:last-child{min-width:0}
+@media (max-width:420px){.tab .ic{width:42px;height:42px}.tab svg{width:24px;height:24px}.tab{padding:12px;gap:10px}.tab b{font-size:12px}}
+.sub{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px;margin:22px 0 34px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.sub span{color:var(--muted)}
+.sub a{font-weight:600;text-decoration:none;color:var(--ink-2);border-bottom:1px solid var(--line)}
+.sub a:hover{color:var(--red);border-color:var(--red)}
+.group{margin-bottom:52px}
+.group-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-bottom:20px}
+.group-h h3{font-weight:900;text-transform:uppercase;font-size:clamp(20px,2.2vw,26px)}
+.group-h p{font-style:italic;color:var(--muted);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:1020px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+.svc{display:grid;grid-template-columns:34px minmax(0,1fr);background:var(--white);border-radius:4px var(--r) var(--r) 4px;overflow:hidden;border:1px solid var(--line)}
+.spine{background:var(--red);color:var(--white);writing-mode:vertical-rl;transform:rotate(180deg);font-size:9.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;display:flex;align-items:center;justify-content:flex-end;padding:18px 0;white-space:nowrap;overflow:hidden}
+.svc-b{padding:22px 22px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.svc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.svc-tags .pill{height:24px;font-size:10.5px;padding:0 10px}
+.svc h4{font-size:17px;font-weight:800;line-height:1.25}
+.svc .d{font-size:14px;color:var(--muted);font-style:italic}
+.svc .p{font-family:var(--serif);font-size:24px;line-height:1.15;margin-top:auto;padding-top:6px}
+.svc .p small{display:block;font-family:var(--display);font-size:12px;color:var(--muted);margin-top:4px}
+.svc details{border-top:1px solid var(--line);padding-top:10px}
+.svc summary{cursor:pointer;list-style:none;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);display:flex;justify-content:space-between}
+.svc summary::-webkit-details-marker{display:none}
+.svc summary::after{content:"+";color:var(--red);font-size:16px;line-height:1}
+.svc details[open] summary::after{content:"−"}
+.svc .arr{margin-top:12px;gap:7px}
+.svc .arr li{font-size:14px}
+.svc .fmt{font-size:13px;color:var(--muted);margin-top:10px}
+.svc .bonus{font-size:13px;margin-top:8px;padding:8px 10px;background:var(--red-soft);border-radius:8px}
+.svc .book{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-decoration:none}
+.svc .book:hover{text-decoration:underline}
+.how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:h;margin-top:12px}
+.how div{padding:20px 0 0;border-top:2px solid var(--red);counter-increment:h}
+.how div::before{content:"0" counter(h);display:block;font-family:var(--serif);font-style:italic;font-size:28px;color:var(--red);line-height:1;margin-bottom:10px}
+.how b{display:block;font-size:15px;font-weight:800;text-transform:uppercase;margin-bottom:6px}
+.how p{color:var(--muted);font-size:14.5px}
+@media (max-width:860px){.how{grid-template-columns:1fr 1fr;row-gap:28px}}
+@media (max-width:480px){.how{grid-template-columns:1fr}}
+
+/* quiz */
+.quiz{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);border-radius:22px;overflow:hidden;background:var(--white);box-shadow:0 40px 80px -50px rgba(60,20,10,.45);min-height:460px}
+.q-side{background:var(--red);color:var(--white);padding:40px 38px;display:flex;flex-direction:column;gap:20px;position:relative;overflow:hidden}
+.q-side .mono{position:absolute;right:-50px;bottom:-40px;width:300px;opacity:.16;pointer-events:none}
+.q-step{font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;opacity:.85}
+.q-title{font-weight:900;text-transform:uppercase;font-size:clamp(24px,2.8vw,34px);line-height:1.06}
+.q-hint{font-style:italic;opacity:.9;max-width:36ch}
+.q-bar{display:flex;gap:6px;margin-top:auto}
+.q-bar i{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.3)}
+.q-bar i.on{background:var(--white)}
+.q-main{padding:40px 38px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;padding:15px 18px;border:1.5px solid var(--line);border-radius:12px;background:var(--white);font:600 15px/1.35 var(--display);color:var(--ink);text-align:left;cursor:pointer;transition:border-color .12s,background .12s}
+.opt:hover{border-color:var(--red);background:var(--red-soft)}
+.opt .k{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--red);color:var(--red);display:grid;place-items:center;font-size:12px;font-weight:700}
+.opt small{display:block;font-weight:400;font-style:italic;color:var(--muted);font-size:13px;margin-top:2px}
+.q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+.linkbtn{background:none;border:0;padding:6px 0;font:600 12px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer}
+.linkbtn:hover{color:var(--red)}
+.res-label{font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--red)}
+.res-main h3{font-weight:900;text-transform:uppercase;font-size:clamp(22px,2.4vw,28px);line-height:1.08;margin-top:6px}
+.res-main .price{font-family:var(--serif);font-size:30px;margin-top:6px}
+.res-main p{color:var(--muted);margin-top:8px}
+.res-main .arr{margin-top:14px}
+.res-alt{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;padding:14px 16px;border-radius:12px;background:var(--paper);font-size:14px}
+.res-alt span{color:var(--muted)}
+.res-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.res-cta .btn{min-height:46px;font-size:11px}
+.note{font-size:13px;color:var(--muted);font-style:italic}
+.copy-text{display:none;width:100%;font:13px/1.45 var(--display);padding:10px;border:1px solid var(--line);border-radius:8px;resize:none}
+@media (max-width:860px){.quiz{grid-template-columns:1fr}.q-side{padding:30px 24px}.q-main{padding:28px 20px}.q-bar{margin-top:8px}}
+
+/* mentorship */
+.flag{background:var(--red);color:var(--white);position:relative;overflow:hidden}
+.flag .bg-mono{position:absolute;right:-160px;top:-60px;width:560px;opacity:.07;pointer-events:none}
+.flag .wrap{position:relative}
+.flag .eyebrow{color:rgba(255,255,255,.8)}
+.flag .lead{color:rgba(255,255,255,.88)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-block:40px;position:relative;z-index:1}
+.stats div{background:var(--white);color:var(--ink);border-radius:16px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:6px;box-shadow:0 18px 36px -22px rgba(0,0,0,.45)}
+.stats b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(30px,3.6vw,46px);line-height:1;color:var(--red);letter-spacing:-.01em;white-space:nowrap}
+.stats span{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}}
+.flag-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media (max-width:900px){.flag-grid{grid-template-columns:1fr}}
+.flag h3{font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:18px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--serif);font-style:italic;font-size:30px;line-height:1}
+.steps b{display:block}
+.steps span{opacity:.85;font-size:14.5px}
+.fl{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.fl li{position:relative;padding-left:22px;font-size:14.5px}
+.fl li::before{content:"→";position:absolute;left:0;font-weight:700}
+.flag-bonus{margin-top:28px;padding:18px 20px;border:1.5px dashed rgba(255,255,255,.6);border-radius:12px;font-size:14.5px}
+.flag-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px;align-items:center}
+.flag-cta small{opacity:.85;font-style:italic}
+.mentor{margin-top:56px;background:var(--white);color:var(--ink);border-radius:var(--r);display:grid;grid-template-columns:1fr 1.3fr auto;gap:28px;padding:30px;align-items:center}
+.mentor h4{font-size:20px;font-weight:900;text-transform:uppercase}
+.mentor p{color:var(--muted);font-style:italic;font-size:14.5px;margin-top:6px}
+.mentor .p{font-family:var(--serif);font-size:28px;white-space:nowrap}
+.mentor .p small{display:block;font-family:var(--display);font-size:12px;color:var(--muted)}
+@media (max-width:900px){.mentor{grid-template-columns:1fr}}
+
+/* opportunities */
+.opp{background:var(--blue);color:var(--white)}
+.opp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+@media (max-width:900px){.opp-grid{grid-template-columns:1fr}}
+.opp-id{display:flex;align-items:center;gap:20px}
+.opp-id img{width:96px;height:96px;border-radius:22px;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+.opp-id p{font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--sky)}
+.opp-title{font-weight:300;font-size:clamp(24px,3.4vw,40px);letter-spacing:.28em;line-height:1.15;text-transform:uppercase;margin-top:6px}
+.opp-title b{font-weight:900;letter-spacing:.04em;display:block}
+.opp .lead{color:rgba(255,255,255,.82);margin-top:28px}
+.opp-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-top:30px}
+.opp-price b{font-family:var(--serif);font-weight:500;font-size:46px;line-height:1}
+.opp-price span{opacity:.8}
+.opp-in{margin-top:22px;font-size:14px;color:rgba(255,255,255,.78)}
+.opp-in b{color:var(--white)}
+.opp .btn-white{color:var(--blue)}
+.opp .btn-white:hover{background:var(--sky)}
+.tg{background:var(--blue-deep);border-radius:22px;border:1px solid rgba(255,255,255,.12);overflow:hidden}
+.tg-h{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.1)}
+.tg-h img{width:44px;height:44px;border-radius:50%}
+.tg-h b{display:block;font-size:15px}
+.tg-h span{font-size:12px;color:var(--sky)}
+.tg-wall{display:flex;flex-wrap:wrap;gap:10px;padding:22px 20px 26px}
+.tc{display:inline-flex;align-items:center;padding:9px 15px;border-radius:999px;font-size:14px;font-weight:700;border:1.5px solid rgba(255,255,255,.35);color:var(--white);background:transparent;transition:transform .15s}
+.tc:nth-child(3n){transform:rotate(-2deg)}
+.tc:nth-child(4n+1){transform:rotate(1.5deg)}
+.tc.f{background:var(--white);color:var(--blue);border-color:var(--white)}
+.tc.s{background:var(--sky);color:var(--blue-deep);border-color:var(--sky)}
+.tc:hover{transform:rotate(0) scale(1.04)}
+
+/* reviews */
+.wins{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-bottom:40px}
+.win{background:var(--red);color:var(--white);border-radius:var(--r);padding:20px 18px;display:flex;flex-direction:column;gap:8px}
+.win b{font-weight:900;text-transform:uppercase;font-size:15px;line-height:1.15}
+.win span{font-size:13px;font-style:italic;opacity:.9}
+@media (max-width:1100px){.wins{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:700px){.wins{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.revs{columns:3 300px;column-gap:18px}
+.rev{break-inside:avoid;margin:0 0 18px;background:var(--white);border:1px solid var(--line);border-radius:4px 18px 18px 18px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:12px}
+.rev blockquote{margin:0;font-size:15px;line-height:1.55}
+.rev blockquote::before{content:"«";display:block;font-family:var(--serif);font-size:44px;line-height:.6;color:var(--red);margin-bottom:6px}
+.rev mark{background:none;color:var(--red);font-weight:700}
+.rev footer{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:13px}
+.rev footer b{font-weight:800}
+.rev footer .pill{height:24px;font-size:10.5px;padding:0 10px}
+.rev.big{background:var(--red);color:var(--white);border-color:var(--red)}
+.rev.big blockquote::before{color:var(--white)}
+.rev.big mark{color:var(--white);text-decoration:underline;text-underline-offset:3px}
+.rev.big ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14px}
+.rev.big .pill{background:var(--white);color:var(--red);border-color:var(--white)}
+
+/* faq */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.faq summary{cursor:pointer;list-style:none;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--red);font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin-top:12px;color:var(--muted);max-width:65ch}
+
+/* footer */
+.foot{background:var(--red);color:var(--white);padding-block:88px 40px}
+.foot-top{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+@media (max-width:760px){.foot-top{grid-template-columns:1fr}}
+.foot h2{font-weight:900;text-transform:uppercase;font-size:clamp(30px,5vw,60px);line-height:1}
+.foot .lead{color:rgba(255,255,255,.88);margin-top:18px}
+.foot-mono{width:150px}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:14px 32px;justify-content:space-between;align-items:center;margin-top:72px;padding-top:24px;border-top:1px solid rgba(255,255,255,.35);font-size:13px}
+.foot-bottom .wm{letter-spacing:.42em;text-transform:uppercase}
+.foot-bottom nav{display:flex;flex-wrap:wrap;gap:12px 22px}
+.foot-bottom a{text-decoration:none;font-weight:600}
+.foot-bottom a:hover{text-decoration:underline}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="EMPOWER Agency, наверх">
+      <img src="img/mono-red.png" alt="">
+      <span>Empower<br>Agency</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#about">О нас</a>
+      <a href="#services">Услуги и цены</a>
+      <a href="#test">Подбор</a>
+      <a href="#mentorship">Наставничество</a>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <details class="mnav" id="mnav">
+      <summary aria-label="Меню">☰</summary>
+      <nav aria-label="Разделы">
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги и цены</a>
+        <a href="#test">Подбор услуги</a>
+        <a href="#mentorship">Наставничество</a>
+        <a href="#opportunities">Opportunities</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+    </details>
+    <a class="btn btn-red book-link" href="#" target="_blank" rel="noopener">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">EMPOWER Agency</p>
+        <h1>С нас стратегия.<br>С тебя <span class="mark">действие</span></h1>
+        <p class="about"><b>EMPOWER</b> – агентство карьерного и академического развития. Мы строим индивидуальную стратегию, готовим документы и вместе подаёмся на возможности: вузы, олимпиады, форумы, стажировки и работу.</p>
+        <div class="who" aria-label="Кому мы помогаем">
+          <a class="pill f" href="#services" data-goto="school">Школьникам</a>
+          <a class="pill" href="#services" data-goto="student">Студентам</a>
+          <a class="pill f" href="#services" data-goto="pro">Специалистам</a>
+          <a class="pill" href="#services" data-goto="biz">Предпринимателям</a>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-red" href="#test">Подобрать услугу <span class="arrow">→</span></a>
+          <a class="btn btn-line" href="#services">Услуги и цены</a>
+        </div>
+      </div>
+      <div class="hero-nb" id="heroNb">
+        <div class="nb-page">
+          <p class="nb-k">EMPOWER · твой план</p>
+          <p class="nb-t">С чего начнём?</p>
+          <p class="nb-s">Выбери, кто ты, и мы сразу откроем подбор услуги под тебя.</p>
+          <div class="nb-opts" id="nbOpts"></div>
+          <button class="nb-close" type="button" id="nbClose">← закрыть блокнот</button>
+        </div>
+        <button class="nb-cover" type="button" id="nbCover" aria-label="Открыть блокнот и начать подбор услуги">
+          <img src="img/notebook.jpg" alt="Красный блокнот EMPOWER Agency">
+          <span class="nb-hint">Открой блокнот <span class="arrow">→</span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-sec" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow">О нас</p>
+          <h2 class="h2" style="margin-top:18px">Агентство <span class="mark">нового поколения</span></h2>
+          <p class="quote">У каждого есть потенциал, <em>важно лишь создать правильные условия для роста</em></p>
+          <div class="values">
+            <span class="pill f">индивидуальный подход</span>
+            <span class="pill">фокус на стратегическом развитии</span>
+            <span class="pill f">международные и российские программы</span>
+            <span class="pill">подаёмся вместе до результата</span>
+          </div>
+        </div>
+        <div class="about-side">
+          <p>Мы сами прошли путь от поступления в топовые вузы до выступлений на международных форумах, стажировок и работы в крупных компаниях. Теперь мы помогаем пройти его школьникам, студентам, специалистам и предпринимателям.</p>
+          <p>С нас стратегия, поддержка и конкретные инструменты. С вас действие.</p>
+        </div>
+      </div>
+
+      <div class="ex-grid">
+        <article class="ex">
+          <img src="img/melina.jpg" alt="Мелине Оганисян">
+          <div class="ex-b">
+            <h3>Мелине<br>Оганисян</h3>
+            <p class="role">сооснователь EMPOWER Agency</p>
+            <ul>
+              <li>МГИМО (бюджет): бакалавриат и магистратура с отличием, выпускница CFAU при МИД КНР. Училась в Royal Agricultural University и St. Lawrence College (Англия)</li>
+              <li>Делегат России на G20 Youth Summit (ЮАР, 2025) и ECOSOC Youth Forum (ООН, Нью-Йорк, 2025)</li>
+              <li>Проекты для Норникеля, Посольства РФ в Италии, Правительства Москвы и Камчатского края</li>
+              <li>Организатор международных форумов, благодарность Президента РФ за ВФМ 2024</li>
+              <li>Говорит на 6 языках</li>
+            </ul>
+          </div>
+        </article>
+        <article class="ex">
+          <img src="img/elina.jpg" alt="Элина Костина">
+          <div class="ex-b">
+            <h3>Элина<br>Костина</h3>
+            <p class="role">сооснователь EMPOWER Agency</p>
+            <ul>
+              <li>МГИМО: бакалавриат с отличием (красный диплом), магистратура IAE Lyon (Франция) и бюджетная магистратура МГИМО</li>
+              <li>Стажировки: RYEP (США), ЭСКАТО (Бангкок), Нацпарк (Красноярск)</li>
+              <li>Делегат России на COP28, COY18, SES 2023, Baku Decides, ECOSOC Youth Forum (ООН, 2026)</li>
+              <li>Автор 10+ научных исследований, стипендиат Правительства Москвы и фонда Вернадского</li>
+              <li>Ex-руководитель Пресс-службы НСО и председатель Экологического клуба МГИМО</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="gal">
+        <div class="gal-h">
+          <div>
+            <p class="eyebrow">Публичная экспертиза</p>
+            <h3 style="margin-top:10px">Форумы <span class="mark">и площадки</span></h3>
+          </div>
+          <div class="gal-nav">
+            <button class="round" type="button" id="galPrev" aria-label="Назад">←</button>
+            <button class="round" type="button" id="galNext" aria-label="Вперёд">→</button>
+          </div>
+        </div>
+        <div class="track" id="track"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:28px">
+        <p class="eyebrow">Услуги и цены</p>
+        <h2 class="h2">Выбери <span class="mark">свой трек</span></h2>
+        <p class="lead">Не знаешь, что выбрать? <a href="#test" style="color:var(--red);font-weight:600">Пройди подбор за 3 вопроса</a>.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Для кого">
+        <button class="tab" role="tab" type="button" data-aud="school" aria-selected="true">
+          <span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M16 9c-3-2.5-7-3-11-2.5v17c4-.5 8 0 11 2.5 3-2.5 7-3 11-2.5v-17C23 6 19 6.5 16 9z"/><path d="M16 9v17"/></svg></span>
+          <span><b>Школьникам</b><small id="cnt-school"></small></span>
+        </button>
+        <button class="tab" role="tab" type="button" data-aud="student" aria-selected="false">
+          <span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M2 12l14-6 14 6-14 6z"/><path d="M8 15v7c2.5 2.5 13.5 2.5 16 0v-7"/><path d="M28 13v7"/></svg></span>
+          <span><b>Студентам</b><small id="cnt-student"></small></span>
+        </button>
+        <button class="tab" role="tab" type="button" data-aud="pro" aria-selected="false">
+          <span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="4" y="10" width="24" height="16" rx="3"/><path d="M12 10V7.5A1.5 1.5 0 0 1 13.5 6h5A1.5 1.5 0 0 1 20 7.5V10"/><path d="M4 17h24"/></svg></span>
+          <span><b>Специалистам</b><small id="cnt-pro"></small></span>
+        </button>
+        <button class="tab" role="tab" type="button" data-aud="biz" aria-selected="false">
+          <span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M4 26h24"/><path d="M6 21l7-7 5 4 9-10"/><path d="M21 8h6v6"/></svg></span>
+          <span><b>Предпринимателям</b><small id="cnt-biz"></small></span>
+        </button>
+      </div>
+      <nav class="sub" id="sub" aria-label="Разделы услуг"></nav>
+      <div id="catalog" role="tabpanel"></div>
+
+      <p class="eyebrow" style="margin-top:72px">Как проходит работа</p>
+      <div class="how">
+        <div><b>Анкета</b><p>Заполняешь анкету, мы заранее изучаем профиль и запрос.</p></div>
+        <div><b>Встреча</b><p>Онлайн 1:1: разбираем цели, точки роста и стратегию.</p></div>
+        <div><b>План и подборка</b><p>Итоговый документ: вузы, программы, возможности, дедлайны и шаги.</p></div>
+        <div><b>Сопровождение</b><p>В расширенных форматах подаёмся вместе и остаёмся на связи в чате.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="test" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Подбор услуги · 3 вопроса</p>
+        <h2 class="h2">Какая услуга <span class="mark">подойдёт тебе?</span></h2>
+        <p class="lead">Ответь на три вопроса: покажем формат под твою цель, альтернативу и стоимость. Результат можно сразу отправить нам в Telegram.</p>
+      </div>
+      <div class="quiz" aria-live="polite">
+        <div class="q-side">
+          <img class="mono" src="img/mono-on-red.png" alt="">
+          <p class="q-step" id="qStep">Вопрос 1 из 3</p>
+          <p class="q-title" id="qTitle">Кто ты?</p>
+          <p class="q-hint" id="qHint"></p>
+          <div class="q-bar" id="qBar"><i class="on"></i><i></i><i></i></div>
+        </div>
+        <div class="q-main" id="qMain"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTORSHIP -->
+  <section class="flag" id="mentorship">
+    <img class="bg-mono" src="img/mono-on-red.png" alt="">
+    <div class="wrap">
+      <div class="sec-head" style="max-width:900px">
+        <p class="eyebrow">Программы сопровождения · флагман</p>
+        <h2 class="h2" style="font-size:clamp(28px,6vw,76px)"><span class="mark inv">Наставничество</span></h2>
+        <p class="lead">Полный карьерный и академический трек в одной программе: стратегия, документы, подготовка к интервью, ИИ-инструменты, подбор возможностей и поддержка. Вместе собираем сильный профиль, подаёмся на возможности и учим делать это самостоятельно.</p>
+      </div>
+      <div class="stats">
+        <div><b>2,5</b><span>месяца</span></div>
+        <div><b>1:1</b><span>онлайн</span></div>
+        <div><b>≈5</b><span>мест в потоке</span></div>
+        <div><b>50 000 ₽</b><span>оплата 2–3 частями</span></div>
+      </div>
+      <div class="flag-grid">
+        <div>
+          <h3>Как проходит</h3>
+          <ol class="steps">
+            <li><div><b>Вводная встреча</b><span>Диагностика, цели, приоритеты и индивидуальный роадмап на 2,5 месяца.</span></div></li>
+            <li><div><b>Сессия на выбор</b><span>ИИ-блок или HR мок-интервью с разбором и обратной связью.</span></div></li>
+            <li><div><b>3 основные сессии 1:1</b><span>Карьерный, академический трек и личный бренд, фокус подстраиваем под тебя.</span></div></li>
+            <li><div><b>Сопровождение в чате</b><span>Практическая поддержка всю программу и доступ в EMPOWER Opportunities.</span></div></li>
+          </ol>
+          <div class="flag-bonus"><b>Бонусы:</b> выпускной в загородном доме под Москвой, сезонные подарки, создание и оформление профиля на HeadHunter и LinkedIn. Библиотека 25+ материалов и ИИ-гайды.</div>
+        </div>
+        <div>
+          <h3>С чем ты выйдешь</h3>
+          <ul class="fl">
+            <li><b>Рабочие инструменты.</b> Цифровой двойник в Claude и опубликованный сайт-портфолио, живая ссылка вместо PDF.</li>
+            <li><b>Поданные заявки.</b> Адаптированные CV и сопроводительные, реально поданные заявки на отобранные форумы, стажировки и программы.</li>
+            <li><b>Дорожная карта на год.</b> Что делать месяц за месяцем после программы, чтобы не терять темп.</li>
+            <li><b>Навык и уверенность.</b> Отработанные самопрезентация и интервью.</li>
+            <li><b>Самостоятельность.</b> Умеешь сам находить возможности и грамотно подаваться.</li>
+            <li><b>Ясность вместо тревоги.</b> Понятная картина: куда двигаться и какие возможности твои.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flag-cta">
+        <a class="btn btn-white book-link" href="#" target="_blank" rel="noopener">Записаться на бесплатную вводную <span class="arrow">→</span></a>
+        <small>Три набора в год: осенний, зимний, весенний</small>
+      </div>
+      <div class="mentor">
+        <div>
+          <h4>Постоянное менторство</h4>
+          <p>Ментор из команды закреплён за тобой и ведёт непрерывно. Можно взять после Наставничества как продолжение.</p>
+        </div>
+        <ul class="arr">
+          <li>1 стратегическая встреча в месяц, 60 минут</li>
+          <li>Поддержка в чате 24/7</li>
+          <li>Ежемесячная персональная подборка возможностей</li>
+          <li>Помощь с откликами и заявками</li>
+        </ul>
+        <div class="p">10 000 ₽<small>в месяц, минимум 3 месяца</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPPORTUNITIES -->
+  <section class="opp" id="opportunities">
+    <div class="wrap opp-grid">
+      <div>
+        <div class="opp-id">
+          <img src="img/logo-blue.jpg" alt="Логотип канала EMPOWER Opportunities">
+          <div>
+            <p>Закрытый Telegram-канал</p>
+            <h2 class="opp-title">Empower<b>Opportunities</b></h2>
+          </div>
+        </div>
+        <p class="lead">Здесь есть всё, чего нам самим не хватало в начале пути: вакансии и проверенные подборки, обратная связь и поддержка комьюнити, помощь с резюме и собеседованиями, советы по тайм-менеджменту, нетворкингу и планированию.</p>
+        <div class="opp-price"><b>693 ₽</b><span>первый месяц, далее 990 ₽ в месяц</span></div>
+        <p class="opp-in">Входит бонусом в <b>Наставничество</b> (всю программу), <b>Бакалавриат в РФ, расширенный</b> (2 месяца) и <b>Сопровождение по мероприятиям</b> (1 месяц).</p>
+        <div class="cta-row">
+          <a class="btn btn-white" href="https://t.me/empoweragencyy/286" target="_blank" rel="noopener">Вступить в канал <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="tg" aria-label="Разделы канала">
+        <div class="tg-h">
+          <img src="img/logo-blue.jpg" alt="">
+          <div><b>EMPOWER | Opportunities</b><span>что внутри</span></div>
+        </div>
+        <div class="tg-wall"><span class="tc f">Важное: новости и анонсы</span><span class="tc s">Общий чат</span><span class="tc ">Вакансии</span><span class="tc f">Возможности: форумы и конференции</span><span class="tc s">Обучение</span><span class="tc ">Школьники</span><span class="tc s">Карьерный гид</span><span class="tc f">Научная деятельность</span><span class="tc ">Лекции и воркшопы</span><span class="tc s">Личная эффективность</span><span class="tc f">Личный бренд</span><span class="tc ">LinkedIn</span><span class="tc s">Поступление за рубеж</span><span class="tc ">Карьерные материалы</span><span class="tc f">Развитие собственных проектов</span><span class="tc s">Подкасты</span><span class="tc ">EMPOWER Talents</span><span class="tc f">Наши успехи</span><span class="tc s">Отзывы на форумы и конференции</span><span class="tc ">Рекомендация от участника</span><span class="tc f">Личная работа</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section id="cases">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Кейсы и отзывы</p>
+        <h2 class="h2">Результаты <span class="mark">наших клиентов</span></h2>
+        <p class="lead">Реальные истории клиентов: с чем пришли, что сделали вместе и к чему пришли.</p>
+      </div>
+      <div class="cs">
+        <div class="cs-tabs" role="tablist" aria-label="Кейсы" id="csList"></div>
+        <div class="cs-panel" role="tabpanel" id="csPanel"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Отзывы и результаты</p>
+        <h2 class="h2">Что говорят <span class="mark">наши клиенты</span></h2>
+        <p class="lead">Сообщения из наших чатов, без редактуры по смыслу.</p>
+      </div>
+      <div class="wins">
+        <div class="win"><b>Магистратура ВШЭ</b><span>приняли на собеседовании</span></div>
+        <div class="win"><b>Сеульский университет</b><span>заявку отобрали на обучение</span></div>
+        <div class="win"><b>Фонд Горчакова</b><span>отбор на курс «Россия – США»</span></div>
+        <div class="win"><b>Стажировка в Mars</b><span>взяли после сопровождения</span></div>
+        <div class="win"><b>Стажировки</b><span>прошли собеседования</span></div>
+        <div class="win"><b>Первая научная статья</b><span>написана и защищена</span></div>
+      </div>
+      <div class="revs">
+        <figure class="rev big">
+          <blockquote>Сильно благодарна за совместную работу на наставничестве. Основная цель заключалась в построении индивидуальной стратегии развития и изучении возможностей внутри университета.</blockquote>
+          <ol>
+            <li>Разобрали подачу на международные стажировки и прошли этот путь на практике</li>
+            <li>Разобрали мотивационное письмо, резюме и научные статьи</li>
+            <li>Совместно написали мою первую научную статью, и я <mark>успешно её защитила</mark></li>
+            <li>Изучили форумы и научные конференции и весь цикл подачи</li>
+            <li>Разобрали карьерную стратегию и резюме для работы</li>
+          </ol>
+          <p style="font-size:14.5px">По сей день мы остаёмся на связи, девочки присылают мероприятия, которые могут мне подойти. А ещё я <mark>обрела комьюнити</mark>, с которым хочется развиваться!</p>
+          <footer><b>Мария</b><span class="pill">Наставничество</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Спасибо большое за помощь с поступлением в <mark>магистратуру ВШЭ</mark>! В сжатые сроки составили сильное резюме и оформили живое и очень глубокое мотивационное эссе. Директор программы отметила живой язык эссе, похвалила! <mark>Приняли на самом собеседовании</mark>, без сомнений!</blockquote>
+          <footer><b>Выпускница</b><span class="pill f">Поступление</span><span class="pill">Документы</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Мою заявку отобрали в <mark>Сеульском университете</mark>, так что осенью буду учиться в Южной Корее. Завтра выступаю на конференции на корейском, 6 июня поеду на ПМЭФ!</blockquote>
+          <footer><b>Полина</b><span class="pill">Наставничество</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Элина, привет! Я с хорошей новостью! <mark>Меня взяли на стажировку в Mars</mark>. Выхожу через 2 недели. Спасибо большое за поддержку и помощь! Особенно в эмоциональном плане. <mark>Подняла уверенность в себе на 100%</mark>.</blockquote>
+          <footer><b>Участница марафона</b><span class="pill">Карьера</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Я уже почти <mark>3 месяца стажируюсь в самой лучшей компании</mark>, которую можно только представить. Если бы не ты и твоя поддержка в определённый момент моей жизни, я бы никогда даже и не знала, что может быть так хорошо. Надеюсь, мы когда-нибудь встретимся как коллеги!</blockquote>
+          <footer><b>Наташа</b><span class="pill">Карьера</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Элина, привет! Совсем забыла рассказать, что <mark>я прошла то собеседование и уже неделю стажируюсь</mark>. Очень благодарна тебе за твоё сопровождение. И отдельное спасибо за то, что дала уверенности и подтолкнула продублировать письмо рекрутеру.</blockquote>
+          <footer><b>Участница марафона</b><span class="pill">Карьера</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote><b>Скорость.</b> Я правда не знала, куда бежать с горящими дедлайнами, но обращение к вам было самым выигрышным вариантом. <b>Индивидуальный подход.</b> Было ощущение, словно мы составляем резюме для нас двоих, <mark>всё без воды и структурировано</mark>. <b>Подготовка самого человека.</b> Ты говорила не только, что писать, но и почему это важно. Благодаря этому <mark>я вспомнила давно забытые достижения</mark>.</blockquote>
+          <footer><b>Клиентка</b><span class="pill">Резюме</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Первая консультация стала для меня тем самым толчком, который требовался долгое время. Практически с первых минут Мелине и Элина озвучили те слова и мысли, которые кружились в моей голове. Когда девочки ознакомили меня с системой и инструментами, <mark>я приобрела лёгкость, уверенность, силы и решимость действовать</mark>.</blockquote>
+          <footer><b>Айлана</b><span class="pill">Консультация</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Этот марафон был для меня полезен и актуален. Я узнала, <mark>как должно выглядеть моё резюме</mark>, чтобы его заметили работодатели. Структурировала все навыки и достижения. Обратная связь добавляла уверенности, потому что ты всегда выделяла мои сильные стороны и <mark>дала действенные советы</mark>, которые можно применить хоть сейчас.</blockquote>
+          <footer><b>Участница марафона</b><span class="pill">Резюме</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Я всё-таки начала заниматься репетиторством, хотя до этого 5 лет откладывала. Сегодня было первое занятие, и мы решили продолжать! Благодаря твоему карьерному марафону я не только <mark>смогла скомпоновать все свои навыки, но и поняла ценность себя как специалиста</mark>.</blockquote>
+          <footer><b>Участница марафона</b><span class="pill">Карьера</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Я прям удивилась, как вы подготовились: <mark>столько информации дали и материала</mark>, не ожидала. Захотелось смотреть в себя, глубже всё анализировать. Также хочу отметить, что чувствовалась доверительная атмосфера.</blockquote>
+          <footer><b>Софья</b><span class="pill">Консультация</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Встреча однозначно вдохновила меня и напомнила о важности личной эффективности и системности. Ничего лишнего, <mark>качество встречи было на высоте</mark>! А ещё очень понравилось оформление презентации.</blockquote>
+          <footer><b>Вероника</b><span class="pill">Консультация</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Вау. <mark>Не ожидала настолько детального рассмотрения ответов</mark>. Спасибо огромное за советы и рекомендации. Пойду доделаю то, что вы сказали, и обязательно попробую указанные платформы!</blockquote>
+          <footer><b>Участница марафона</b><span class="pill">Карьера</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Вы показали, что существует множество дорог и векторов для развития, и это помогает взглянуть на всё под другим углом. Вы делаете <mark>очень важное и нужное дело</mark>.</blockquote>
+          <footer><b>Юлия</b><span class="pill">Консультация</span></footer>
+        </figure>
+        <figure class="rev">
+          <blockquote>Боже мой. <mark>Вы просто лучшие</mark>. Очень круто!</blockquote>
+          <footer><b>Клиент</b><span class="pill">Портфолио достижений</span></footer>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Вопросы</p>
+        <h2 class="h2">Частые <span class="mark">вопросы</span></h2>
+      </div>
+      <div class="faq">
+        <details><summary>Не знаю, какая услуга мне нужна</summary><p>Пройди подбор услуги на сайте: он предложит формат под цель. Или напиши нам в Telegram, разберёмся вместе. На Наставничество записываем через бесплатную вводную консультацию.</p></details>
+        <details><summary>Можно ли оплатить частями?</summary><p>Да, Наставничество можно оплатить 2–3 частями.</p></details>
+        <details><summary>Работа проходит онлайн?</summary><p>Да, встречи и сопровождение проходят онлайн, в формате 1:1. Для участников Наставничества в конце программы проходит выпускной в загородном доме под Москвой.</p></details>
+        <details><summary>Вы готовите к олимпиадам?</summary><p>Мы не готовим к олимпиадам и не проверяем работы. Помогаем выбрать олимпиады, которые дают льготы под нужный вуз, не пропустить регистрации и туры, даём материалы и контакты проверенных наставников.</p></details>
+        <details><summary>Документы можно сделать на английском?</summary><p>Да. Версия или перевод на английский или другой иностранный язык стоит +1 000 ₽ к любому документу, в пакете «Портфолио под ключ» +500 ₽ за документ.</p></details>
+        <details><summary>Сколько стоят услуги для предпринимателей?</summary><p>Стоимость формируется индивидуально под запрос. Напиши нам в Telegram, обсудим задачу и предложим формат.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <h2>Начни с <span class="mark inv">разговора</span></h2>
+        <p class="lead">Напиши нам в Telegram: расскажи о цели, и мы предложим формат под неё.</p>
+        <div class="cta-row">
+          <a class="btn btn-white book-link" href="#" target="_blank" rel="noopener">Записаться в Telegram <span class="arrow">→</span></a>
+          <a class="btn btn-ghost-w" href="#test">Подобрать услугу</a>
+        </div>
+      </div>
+      <img class="foot-mono" src="img/mono-on-red.png" alt="EMPOWER Agency">
+    </div>
+    <div class="foot-bottom">
+      <span class="wm">Empower Agency</span>
+      <nav aria-label="Контакты">
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#mentorship">Наставничество</a>
+        <a href="#opportunities">Opportunities</a>
+        <a class="book-link" href="#" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://www.instagram.com/empower_agencyy/" target="_blank" rel="noopener">Instagram @empower_agencyy</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Фото">
+  <img id="lbImg" src="img/g-group.jpg" alt="">
+  <div class="lb-bar">
+    <p id="lbCap"></p>
+    <div class="lb-ctrl">
+      <button class="round" type="button" id="lbPrev" aria-label="Предыдущее фото">←</button>
+      <button class="round" type="button" id="lbNext" aria-label="Следующее фото">→</button>
+      <button class="round" type="button" id="lbClose" aria-label="Закрыть">✕</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const TG = "https://t.me/empoweragencyy/844";
+document.querySelectorAll(".book-link").forEach(a => a.href = TG);
+const mnav = document.getElementById("mnav");
+mnav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mnav.open = false));
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+/* активный раздел в меню */
+const navLinks=[...document.querySelectorAll(".nav a, .mnav nav a")];
+const secs=["about","services","test","mentorship","opportunities","cases","reviews","faq"].map(id=>document.getElementById(id));
+function spy(){
+  const y=window.scrollY+120; let cur=null;
+  secs.forEach(s=>{ if(s.offsetTop<=y) cur=s.id; });
+  navLinks.forEach(a=>a.classList.toggle("on", a.getAttribute("href")==="#"+cur));
+}
+window.addEventListener("scroll",spy,{passive:true}); spy();
+
+/* выступления */
+const PH=[
+  {s:"img/founders-talk.jpg",c:"Спикеры форума Woman of 21st Century"},
+  {s:"img/g-lyceum.jpg",c:"Лекция о карьерном треке для Лицея ВШЭ"},
+  {s:"img/g-spief.jpg",c:"ПМЭФ-2026"},
+  {s:"img/founders-brics.jpg",c:"Научно-образовательный конгресс БРИКС, Сириус"},
+  {s:"img/g-creative.jpg",c:"Спикеры молодёжного форума «Время Креатива»"},
+  {s:"img/g-group.jpg",c:"Выпускной потока Наставничества 2026",w:1}
+];
+const track=document.getElementById("track");
+track.innerHTML=PH.map((p,i)=>`<button class="slide${p.w?" w":""}" type="button" data-i="${i}"><img src="${p.s}" alt="${esc(p.c)}"><span>${esc(p.c)}</span></button>`).join("");
+const stepW=()=>Math.max(260,track.clientWidth*0.7);
+document.getElementById("galPrev").onclick=()=>track.scrollBy({left:-stepW(),behavior:"smooth"});
+document.getElementById("galNext").onclick=()=>track.scrollBy({left:stepW(),behavior:"smooth"});
+
+/* кейсы */
+const CASES=[
+  {id:"samira",name:"Самира",kind:"Наставничество",tags:["Наставничество","2,5 месяца"],m:"6 → 1",ml:"шесть направлений, одна стратегия",
+   a:"Выпускница МГИМО с красным дипломом. Одновременно преподавание, собственный образовательный проект, блог, стажировка в РСМД и поступление в магистратуру. Всё без единой системы и плана, и с постоянной усталостью.",
+   w:["Провели аудит всех направлений и нашли общую тему: международная повестка","Оформили резюме, подобрали конференции и написали тезисы","Собрали журналы ВАК под каждую главу диплома и 6 грантовых программ с чек-листом заявки","Подготовили стратегию на год: 36 страниц по 6 направлениям и дорожную карту"],
+   r:["<b>Определилась</b> с магистратурой","Согласовала с научруком план из <b>5 публикаций</b> на основе диплома","Съездила на первую <b>международную программу</b> в Индию","Научилась писать мотивационные письма и проходить отбор на форумы","Не бросила ни одного направления и перестала выгорать"]},
+  {id:"dasha",name:"Даша",kind:"Международный трек",tags:["Международный трек","5 встреч"],m:"17 вузов",ml:"в 5 странах под один профиль",
+   a:"3 курс РАНХиГС, запуски в EdTech и HealthTech, управление командами до 20 человек. При этом английский B2 (нужен IELTS 6.5+), нет международного академического опыта, LinkedIn не заполнен и нет понимания, куда двигаться.",
+   w:["Выстроили академический трек: форумы, летние школы, кейс-чемпионаты","Подобрали магистратуры во Франции, Италии, Нидерландах, Китае и Великобритании с дедлайнами, стипендиями и оценкой фита","Упаковали LinkedIn: шапка, раздел «О себе» на английском, контент-план и 20+ контактов из целевых компаний","Познакомили с участницей нашего сопровождения: вместе пошли на кейс-чемпионат"],
+   r:["<b>17 университетов</b> в 5 странах","<b>10+</b> кейс-чемпионатов в плане","Нашли программы во Франции от <b>250 € в год</b> со стипендией","Дорожная карта по полугодиям до поступления в <b>2028</b>"]},
+  {id:"sasha",name:"Саша",kind:"Наставничество",tags:["Наставничество","3 месяца"],m:"15+",ml:"индивидуальных материалов",
+   a:"Студент 2 курса, направление «строительство». Запрос: сформировать резюме и портфолио, развить академический трек, подготовиться к поступлению в Сингапур и найти работу по специальности.",
+   w:["За 4 встречи выстроили карьерную стратегию: от цели до устройства на работу","Составили пошаговый план поступления в Сингапур до 4 курса и подобрали магистратуры","Разобрали, как писать научную статью и проходить отбор на форумы","Подготовили сопроводительные письма, список мероприятий по профилю и дорожную карту к международному экзамену по английскому"],
+   r:["С новым резюме нашёл <b>рабочий проект</b> и договорился о рекомендательном письме","На отраслевом мероприятии нашёл <b>работу по специальности</b>","Впервые написал <b>тезисы</b> и подался на научную конференцию","Подался на <b>2 стажировки</b>: Marks Group и ПИК"]},
+  {id:"anya",name:"Аня Самокатова",kind:"Предпринимателям",tags:["Предпринимателям","Личный бренд"],m:"Спикер",ml:"международного бизнес-форума в Сколково",
+   a:"Более 7 лет проджект в EdTech, основательница онлайн-школы управления проектами с дипломами переподготовки федерального вуза. В апреле европейская конференция отозвала её заявку только из-за страны.",
+   w:["Разделили ситуацию на то, что не изменить, и то, на что можно влиять, и пересобрали стратегию входа","Выбирали площадки не по географии, а по реальному весу: организатор, прошлые спикеры, официальный статус","Отсеяли конференции-пустышки и сомнительные мероприятия","Упаковали заявку под комиссию: результаты академии и выпускники, которые работают в онлайн-школах по всему миру"],
+   r:["28 сентября 2026 выступила <b>спикером</b> на V Международном бизнес-форуме для женщин-лидеров","Площадка: <b>Технопарк Сколково</b>","Форум с официальным статусом <b>BRICS CCI WISE</b>","Отказ превратился в <b>новую траекторию</b>, а не в стоп"]},
+  {id:"margo",name:"Марго Савчук",kind:"Предпринимателям",tags:["Предпринимателям","Магистратура"],m:"94 / 100",ml:"баллы за портфолио при проходных 85",
+   a:"Предприниматель и блогер, 803 тыс. подписчиков. Нужна была программа, которую можно совмещать с материнством, очно и онлайн. Выбор стоял между бизнесом, маркетингом и психологией.",
+   w:["Выбрали направление, которое объединяет бизнес и работу с людьми","Маркетинг отсекли: Марго уже сильный практик, навыки выгоднее усиливать курсами","Отобрали 2 подходящие программы, оформили документы и упаковали портфолио","Заложили план Б как часть общей стратегии"],
+   r:["Портфолио набрало <b>94 балла из 100</b> при проходных 85","Поступила в магистратуру <b>«Психология в бизнесе»</b> в одном из самых престижных вузов страны","Учится в удобном формате: <b>онлайн и очно</b>"]}
+];
+const csList=document.getElementById("csList"), csPanel=document.getElementById("csPanel"); let csI=0;
+csList.innerHTML=CASES.map((c,i)=>`<button class="cs-tab" role="tab" type="button" id="case-${c.id}" data-i="${i}" aria-selected="${i===0}"><i>0${i+1}</i><b>${esc(c.name)}</b></button>`).join("");
+function showCase(i){
+  csI=(i+CASES.length)%CASES.length; const c=CASES[csI];
+  csList.querySelectorAll(".cs-tab").forEach((t,k)=>t.setAttribute("aria-selected",String(k===csI)));
+  csPanel.innerHTML=`<div class="cs-sheet">
+    <div class="cs-left">
+      <p class="cs-kind">${esc(c.tags.join(" · "))}</p>
+      <h3>${esc(c.name)}</h3>
+      <p class="cs-big">${esc(c.m)}<small>${esc(c.ml)}</small></p>
+      <div class="cs-a"><p>${esc(c.a)}</p></div>
+    </div>
+    <div class="cs-right">
+      <div><h4>Что сделали</h4><ol class="cs-steps">${c.w.map(x=>`<li><span>${esc(x)}</span></li>`).join("")}</ol></div>
+      <div><h4>Результат</h4><ul class="cs-res">${c.r.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+    </div></div>
+    <div class="cs-nav"><button type="button" id="csPrev">← Назад</button><span>Кейс ${csI+1} / ${CASES.length}</span><button type="button" id="csNext">Дальше →</button></div>`;
+  document.getElementById("csPrev").onclick=()=>showCase(csI-1);
+  document.getElementById("csNext").onclick=()=>showCase(csI+1);
+}
+csList.querySelectorAll(".cs-tab").forEach(t=>t.addEventListener("click",()=>showCase(+t.dataset.i)));
+showCase(0);
+document.addEventListener("click",e=>{ const a=e.target.closest('a[href^="#case-"]'); if(!a) return; const i=CASES.findIndex(c=>"#case-"+c.id===a.getAttribute("href")); if(i>=0) showCase(i); });
+
+/* просмотр фото и слайдов */
+const lb=document.getElementById("lb"), lbImg=document.getElementById("lbImg"), lbCap=document.getElementById("lbCap");
+let LIST=[], li=0;
+function showLb(list,i){ if(list) LIST=list; li=(i+LIST.length)%LIST.length; lbImg.src=LIST[li].s; lbImg.alt=LIST[li].c; lbCap.textContent=`${LIST[li].c} · ${li+1}/${LIST.length}`; lb.hidden=false; }
+track.querySelectorAll(".slide").forEach(b=>b.addEventListener("click",()=>showLb(PH,+b.dataset.i)));
+document.getElementById("lbPrev").onclick=()=>showLb(null,li-1);
+document.getElementById("lbNext").onclick=()=>showLb(null,li+1);
+document.getElementById("lbClose").onclick=()=>{lb.hidden=true};
+lb.addEventListener("click",e=>{ if(e.target===lb) lb.hidden=true; });
+document.addEventListener("keydown",e=>{ if(lb.hidden) return; if(e.key==="Escape") lb.hidden=true; if(e.key==="ArrowRight") showLb(null,li+1); if(e.key==="ArrowLeft") showLb(null,li-1); });
+let tx=null; lb.addEventListener("touchstart",e=>{tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener("touchend",e=>{ if(tx===null) return; const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) showLb(null,li+(dx<0?1:-1)); tx=null; });
+
+/* услуги (из прайсов EMPOWER) */
+const CATS = {
+  biz:      {name:"Для предпринимателей", spine:"Бизнес", sub:"Образование и развитие как стратегический инструмент роста бизнеса, бренда и влияния."},
+  school:   {name:"Школа и поступление", spine:"Школьникам", sub:"Акценты и глубина зависят от класса и цели ученика."},
+  consult:  {name:"Консультации и подбор", spine:"Консультации", sub:"Точечная помощь без долгой программы."},
+  admission:{name:"Магистратура и зарубежные вузы", spine:"Поступление", sub:"От подбора программ до зачисления или оффера."},
+  docs:     {name:"Портфолио и документы", spine:"Документы", sub:"Под конкретную цель. Перевод на иностранный язык +1 000 ₽."},
+  products: {name:"Собеседования и ИИ", spine:"Продукты", sub:"Отдельные продукты."},
+  programs: {name:"Программы сопровождения", spine:"Программы", sub:""}
+};
+const S = [
+  {id:"consult",cat:"consult",aud:["school","student","pro"],t:"Консультация (любой запрос)",d:"Разовый разбор ситуации и план действий: карьера, поступление, наука, личный бренд, выступления, смена сферы.",p:"10 000 ₽",tags:["60–90 мин"],
+   inc:["Анкета и предварительный анализ профиля до встречи","Онлайн-встреча 60–90 мин: запрос, точки роста, стратегия","План действий на ближайшие 1–3 месяца","Итоговый документ с рекомендациями"],f:"1 онлайн-встреча + итоговые материалы + ответы в чате"},
+  {id:"consult1",cat:"consult",aud:["school","student","pro"],t:"Консультация + подбор: один запрос",d:"Рекомендации, персональная подборка возможностей и помощь с откликом.",p:"15 000 ₽",tags:["подбор","отклик"],
+   inc:["Всё из консультации","Подбор под цель: вакансии и стажировки или форумы, конференции, гранты, стипендии","Подаёмся вместе на 1 возможность","Учим подаваться самостоятельно","Поддержка в чате на этапе подачи"],f:"Встреча + разбор подборки + сопровождение одного отклика + чат"},
+  {id:"consultMulti",cat:"consult",aud:["student","pro"],t:"Консультация + подбор: многогранный запрос",d:"Когда запрос широкий: и карьера, и академ, и стратегия развития.",p:"20 000 ₽",tags:["несколько целей"],
+   inc:["Всё из формата «один запрос»","Работа по нескольким направлениям сразу","Расширенный подбор возможностей под несколько целей","Помощь с откликом + обучение самостоятельной подаче"],f:"Встреча + расширенный подбор + сопровождение отклика + чат"},
+
+  {id:"schoolNav",cat:"school",aud:["school"],t:"Навигатор по сильным школам",d:"Для семей, которые выбирают или меняют школу под цель ребёнка.",p:"10 000 ₽",tags:["5–10 класс"],
+   inc:["Аудит целей и текущего уровня ребёнка","Подбор 3–5 школ: условия, дедлайны, рейтинги","«Внутренняя кухня»: олимпиадный резерв или классический физмат","Дорожная карта поступления в школу"],f:"Вводный созвон + основной созвон с разбором (~60 мин)"},
+  {id:"prof",cat:"school",aud:["school"],t:"Профориентация",d:"Осознанно выбрать профессию и направление. Не даём готовых ответов, помогаем их найти.",p:"7 000 ₽",tags:["5–11 класс"],
+   inc:["Диагностика интересов и сильных сторон по проверенным методикам","3–5 направлений: карта траекторий, компании, вилки зарплат","Чат-трекинг на 1 месяц"],f:"Диагностика + консультация 60–90 мин + документ с подбором"},
+  {id:"qa",cat:"school",aud:["school"],t:"Консультация «Вопрос-ответ»",d:"Быстро закрыть вопросы по вузам, направлениям, поступлению и мероприятиям.",p:"5 000 ₽",tags:["5–11 класс","~60 мин"],
+   inc:["Разговор с экспертами агентства","Ответы на заранее подготовленные вопросы","Проверенная экспертная информация"],f:"1 консультация (~60 мин)"},
+  {id:"bachBase",cat:"school",aud:["school"],t:"Бакалавриат в РФ: базовый",d:"Осознанно выбрать вуз и направление и получить конкретный план поступления.",p:"15 000 ₽",tags:["9–11 класс"],
+   inc:["Консультация 1: аудит профиля, интересов и целей","Консультация 2: подбор вузов и программ + стратегия","Документ: вузы, баллы, дедлайны, приоритеты"],f:"2 консультации + документ с подбором"},
+  {id:"bachFull",cat:"school",aud:["school"],t:"Бакалавриат в РФ: расширенный",d:"Весь путь от аудита до зачисления вместе с экспертами.",p:"30 000 / 50 000 ₽",pn:"1–3 вуза / 4–5 вузов",tags:["9–11 класс","до зачисления"],
+   inc:["Всё из базового формата","Пакет документов, подача на порталах, связь с приёмными комиссиями","Контакт студента желаемого вуза, мониторинг конкурсных списков","Академическая консультация после поступления + чат"],f:"3 консультации + чат",b:"EMPOWER Opportunities на 2 месяца"},
+  {id:"bachAbroad",cat:"school",aud:["school"],t:"Бакалавриат за рубежом",d:"Базовый разбор и подбор или полное сопровождение до оффера.",p:"по запросу",pn:"по стране и числу программ",tags:["9–11 класс","за рубеж"],
+   inc:["Разбор профиля и подбор программ","Полное сопровождение до оффера"],f:"Индивидуально"},
+  {id:"olyBase",cat:"school",aud:["school"],t:"Олимпиадная стратегия: базовая",d:"Какие олимпиады реально дают льготы под твой вуз, и как не пропустить регистрации.",p:"7 000 ₽",tags:["8–11 класс"],
+   inc:["Разбор до 3 вузов и 6 направлений","Перечневые олимпиады РСОШ с уровнем и льготами (БВИ, 100 баллов ЕГЭ)","Приоритеты с учётом расписания и сложности"],f:"1 консультация + документ с олимпиадами, льготами и датами",b:"Шаблон-расписание олимпиад, чек-лист по подготовке"},
+  {id:"olyFull",cat:"school",aud:["school"],t:"Олимпиадная стратегия: расширенная",d:"Сопровождение на протяжении всего олимпиадного сезона.",p:"35 000 ₽",tags:["8–11 класс","весь сезон"],
+   inc:["Всё из базового формата","Закреплённый куратор от старта до финала сезона","Напоминания о регистрациях и турах, материалы прошлых лет","Поддержка при выгорании и стрессе перед турами"],f:"Консультация + еженедельное курирование + чат + документ",b:"Контакты проверенных наставников для углублённой подготовки"},
+  {id:"events",cat:"school",aud:["school"],t:"Подбор мероприятий, программ и школ",d:"Список возможностей для портфолио на ближайшие месяцы, включая летние и зимние школы.",p:"10 000 ₽",tags:["5–11 класс"],
+   inc:["Анализ целей и стратегия участия","Персональный список форумов, конференций, программ и школ"],f:"Консультация + документ с подбором",b:"«Формулировки, которые цепляют» и чек-лист перед отправкой заявки"},
+  {id:"eventsFull",cat:"school",aud:["school"],t:"Сопровождение по мероприятиям",d:"Чтобы пройти отбор, а не просто подать заявку.",p:"25 000 ₽",tags:["5–11 класс","до подачи"],
+   inc:["Вводная + 2 консультации: разбор заявок, лайфхаки, нетворкинг","Подбор событий и подготовка заявки: анкета, мотивационное, связь с организаторами","Сопровождение до подачи + чат"],f:"2 консультации + чат на всём этапе подачи + документ",b:"EMPOWER Opportunities на месяц, формулировки и чек-лист, бесплатная проверка следующей заявки"},
+
+  {id:"magSelect",cat:"admission",aud:["student","pro"],t:"Магистратура в РФ: подбор программ",d:"Понятная стратегия поступления в магистратуру.",p:"15 000 ₽",tags:["магистратура"],
+   inc:["Анкета и анализ профиля, целей и интересов","Подборка вузов и программ: требования, баллы, дедлайны, перспективы","Разбор онлайн (~60 мин) + стратегия поступления","Рекомендации по портфолио и первым шагам после поступления"],f:"Анкета + онлайн-встреча + итоговый документ с планом"},
+  {id:"magFull",cat:"admission",aud:["student","pro"],t:"Магистратура в РФ: сопровождение до зачисления",d:"Весь путь поступления в магистратуру вместе с экспертами.",p:"от 10 000 ₽",pn:"за 1 программу, зависит от числа программ",tags:["магистратура","1:1"],
+   inc:["Всё из подбора программ","CV, мотивационное, рекомендации под каждую программу","Сопровождение подачи до зачисления, стипендии в подборе"],f:"Индивидуально 1:1 + поддержка в чате, длительность зависит от дедлайнов"},
+  {id:"abroad",cat:"admission",aud:["student","pro"],t:"Зарубежный вуз",d:"Подбор программ за рубежом или полное сопровождение до оффера.",p:"по запросу",pn:"по стране и числу программ",tags:["за рубеж"],
+   inc:["Подбор: анкета + подборка программ + разбор","Сопровождение: подготовка документов и подача до оффера"],f:"Индивидуально, по стране и количеству программ"},
+
+  {id:"cv",cat:"docs",aud:["student","pro"],t:"Резюме (CV)",d:"Для работы, стажировки, поступления или стипендии.",p:"5 000 ₽",pn:"адаптация под другую вакансию: 1 000 ₽",tags:["асинхронно"],
+   inc:["Создание с нуля или полная переупаковка","Адаптация под вакансию или программу и ATS-системы","Сильная подача опыта, даже если кажется, что писать нечего"],f:"Асинхронно: анкета или голосовые, готовый документ в согласованный срок"},
+  {id:"cvPortfolio",cat:"docs",aud:["student","pro"],t:"Резюме в формате портфолио",d:"Визуальное портфолио с кейсами и результатами для креативных, продуктовых, исследовательских и проектных профилей.",p:"8 000 ₽",tags:["PDF"],
+   inc:["Задизайненный документ вместо сплошного текста","Кейсы и проекты со скриншотами и иллюстрациями","Визуализация результатов: цифры, графики, «до / после»","Структура, которая ведёт к сильным сторонам"],f:"По вашим материалам + обратная связь, итог: PDF-портфолио"},
+  {id:"cover",cat:"docs",aud:["student","pro"],t:"Сопроводительное письмо",d:"Под конкретную вакансию или программу.",p:"1 000 ₽",pn:"адаптация под другую позицию: 500 ₽",tags:["асинхронно"],
+   inc:["Письмо, которое раскрывает мотивацию","Адаптация под требования компании или страны"],f:"Асинхронно по вашим вводным"},
+  {id:"motivation",cat:"docs",aud:["school","student","pro"],t:"Мотивационное письмо",d:"Motivation Letter или Statement of Purpose для поступления и стипендий.",p:"3 500 ₽",pn:"под следующую программу: +1 000 ₽",tags:["SOP"],
+   inc:["Структура и текст с акцентом на сильные стороны","Адаптация под требования программы"],f:"Асинхронно или с онлайн-встречей"},
+  {id:"reco",cat:"docs",aud:["school","student","pro"],t:"Рекомендательное письмо",d:"Для поступления, стипендий и программ.",p:"2 000 ₽",tags:["асинхронно"],
+   inc:["Структура и текст от лица рекомендателя","Акцент на академических и профессиональных достижениях"],f:"Асинхронно по вашим вводным"},
+  {id:"character",cat:"docs",aud:["school","student","pro"],t:"Характеристика",d:"Для поступления, конкурсов и программ.",p:"2 000 ₽",tags:["асинхронно"],
+   inc:["Текст характеристики под конкретную цель"],f:"Асинхронно по вашим вводным"},
+  {id:"portfolioPack",cat:"docs",aud:["student","pro"],t:"Портфолио под ключ",d:"Цельный пакет для магистратуры, форума или другой возможности.",p:"10 000 ₽",pn:"по отдельности 12 500 ₽",tags:["пакет"],
+   inc:["Резюме + мотивационное + рекомендательное + характеристика (по запросу)","Единый структурированный PDF","Советы, как сделать портфолио заметным для комиссии"],f:"Онлайн по вашим материалам. Доп. рекомендательное +1 000 ₽, перевод +500 ₽ за документ"},
+
+  {id:"interview",cat:"products",aud:["student","pro"],t:"Подготовка к собеседованию",d:"Практика с HR или теория по нашим материалам. Вместе выгоднее на 2 000 ₽.",p:"от 5 000 ₽",pn:"практика 5 000 · теория 7 000 · вместе 10 000",tags:["мок-интервью"],
+   inc:["Практика: питч и самопрезентация, ответы на неожиданные вопросы, мок-интервью с HR и разбор","Теория: рассказ о себе, 11 частых вопросов, работа с волнением, вопросы рекрутеру, экспресс-подготовка"],f:"1 консультация на каждый формат"},
+  {id:"ai",cat:"products",aud:["student","pro"],t:"ИИ под ключ",d:"Всё из ИИ-интенсива EMPOWER под твой уровень. Двойник и сайт работают на каждую заявку весь год.",p:"10 000 ₽",tags:["Claude","сайт-портфолио"],
+   inc:["Цифровой двойник в Claude: черновики заявок за 10 минут","Личный сайт-портфолио с хостингом","AI-first мышление и промпт-инжиниринг","ИИ для учёбы, контента и разбора форумов","Все гайды интенсива"],f:"1 онлайн-встреча + материалы + ответы в чате"},
+
+  {id:"bizEdu",cat:"biz",aud:["biz"],t:"Образование как актив",d:"Магистратура и программы в России и за рубежом: подбор, документы, сопровождение до зачисления.",p:"индивидуально",pn:"стоимость формируется под запрос",tags:["программы","РФ и за рубеж"],
+   inc:["Подбор магистратуры и программ в России и за рубежом","Подготовка документов","Сопровождение до зачисления"]},
+  {id:"bizBrand",cat:"biz",aud:["biz"],t:"Личный бренд",d:"Позиционирование, каналы присутствия, контентные темы, выступления, LinkedIn.",p:"индивидуально",pn:"стоимость формируется под запрос",tags:["позиционирование"],
+   inc:["Позиционирование","Каналы присутствия и контентные темы","Выступления","LinkedIn"]},
+  {id:"bizIntl",cat:"biz",aud:["biz"],t:"Международные возможности",d:"Нетворкинг, компетенции и выход на глобальный уровень. Плюс ИИ-инструменты в работе.",p:"индивидуально",pn:"стоимость формируется под запрос",tags:["нетворкинг","ИИ"],
+   inc:["Нетворкинг","Компетенции","Выход на глобальный уровень","ИИ-инструменты в работе"]},
+
+  {id:"mentor",cat:"programs",aud:[],t:"Наставничество",d:"Флагман: полный карьерный и академический трек 1:1 на 2,5 месяца со стратегией, документами, подачей заявок и поддержкой.",p:"50 000 ₽",pn:"рассрочка на 2–3 части",
+   inc:["Вводная встреча + 4 основные сессии","Подбор возможностей и подача заявок вместе","Личный бренд: позиционирование, каналы, контентные темы","Поддержка в чате и доступ в EMPOWER Opportunities"]},
+  {id:"subscription",cat:"programs",aud:[],t:"Постоянное менторство",d:"Закреплённый ментор и стабильная поддержка на длинной дистанции.",p:"10 000 ₽ / мес",pn:"от 3 месяцев",
+   inc:["Стратегическая встреча раз в месяц","Чат 24/7","Ежемесячная подборка возможностей","Помощь с откликами"]}
+];
+const byId=Object.fromEntries(S.map(s=>[s.id,s]));
+const ORDER=["biz","school","consult","admission","docs","products"];
+function card(s){
+  return `<article class="svc">
+    <div class="spine">${esc(CATS[s.cat].spine)}</div>
+    <div class="svc-b">
+      <div class="svc-tags">${(s.tags||[]).map((t,i)=>`<span class="pill${i===0?" f":""}">${esc(t)}</span>`).join("")}</div>
+      <h4>${esc(s.t)}</h4>
+      <p class="d">${esc(s.d)}</p>
+      <p class="p">${esc(s.p)}${s.pn?`<small>${esc(s.pn)}</small>`:""}</p>
+      <details><summary>Что входит</summary>
+        <ul class="arr">${s.inc.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
+        ${s.f?`<p class="fmt"><b>Формат:</b> ${esc(s.f)}</p>`:""}
+        ${s.b?`<p class="bonus"><b>Бонус:</b> ${esc(s.b)}</p>`:""}
+      </details>
+      <a class="book" href="${TG}" target="_blank" rel="noopener">Записаться →</a>
+    </div></article>`;
+}
+const plural=n=>n%10===1&&n%100!==11?"услуга":(n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?"услуги":"услуг");
+["school","student","pro","biz"].forEach(a=>{ const n=S.filter(s=>s.aud.includes(a)).length; document.getElementById("cnt-"+a).textContent=`${n} ${plural(n)}`; });
+const catalog=document.getElementById("catalog"), sub=document.getElementById("sub");
+function showAud(a){
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",String(t.dataset.aud===a)));
+  const groups=ORDER.map(c=>({c,items:S.filter(s=>s.cat===c&&s.aud.includes(a))})).filter(g=>g.items.length);
+  catalog.innerHTML=groups.map(g=>`<div class="group" id="g-${g.c}">
+    <div class="group-h"><h3>${esc(CATS[g.c].name)}</h3><p>${esc(CATS[g.c].sub)}</p></div>
+    <div class="grid">${g.items.map(card).join("")}</div></div>`).join("");
+  sub.innerHTML=`<span>В этом треке:</span>`+groups.map(g=>`<a href="#g-${g.c}">${esc(CATS[g.c].name)}</a>`).join("")+(a==="student"||a==="pro"?`<a href="#mentorship">Наставничество и менторство</a>`:"")+(a==="biz"?`<a href="#case-anya">Кейс Ани Самокатовой</a><a href="#case-margo">Кейс Марго Савчук</a>`:"")+`<a href="#opportunities">Канал Opportunities</a>`;
+}
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>showAud(t.dataset.aud)));
+document.querySelectorAll("[data-goto]").forEach(a=>a.addEventListener("click",()=>showAud(a.dataset.goto)));
+showAud("school");
+
+/* подбор услуги */
+const ROLES=[
+  {v:"junior",t:"Школьник 5–8 класса",s:"или родитель школьника"},
+  {v:"senior",t:"Школьник 9–11 класса",s:"или родитель абитуриента"},
+  {v:"student",t:"Студент",s:"бакалавриат или магистратура"},
+  {v:"pro",t:"Выпускник или специалист",s:"карьера, смена сферы"},
+  {v:"biz",t:"Предприниматель",s:"бизнес, личный бренд, образование"}
+];
+const GOALS={
+  junior:[
+    {v:"school",t:"Выбрать или сменить школу",m:{light:["schoolNav","qa"],mid:["schoolNav","prof"],full:["schoolNav","olyFull"]}},
+    {v:"prof",t:"Осознанно выбрать профессию",m:{light:["prof","qa"],mid:["prof","events"],full:["prof","eventsFull"]}},
+    {v:"oly",t:"Олимпиады и льготы при поступлении",s:"с 8 класса",m:{light:["olyBase","qa"],mid:["olyBase","olyFull"],full:["olyFull","olyBase"]}},
+    {v:"events",t:"Форумы, конференции, летние школы",m:{light:["events","qa"],mid:["events","eventsFull"],full:["eventsFull","events"]}},
+    {v:"qa",t:"Задать вопросы экспертам",s:"без долгой программы",m:{light:["qa","prof"],mid:["qa","events"],full:["qa","eventsFull"]}}
+  ],
+  senior:[
+    {v:"uni",t:"Поступить в вуз в России",m:{light:["bachBase","qa"],mid:["bachBase","bachFull"],full:["bachFull","bachBase"]}},
+    {v:"abroad",t:"Поступить в вуз за рубежом",m:{light:["bachAbroad","qa"],mid:["bachAbroad","bachBase"],full:["bachAbroad","bachFull"]}},
+    {v:"oly",t:"Поступить без ЕГЭ через олимпиады",m:{light:["olyBase","qa"],mid:["olyBase","olyFull"],full:["olyFull","bachFull"]}},
+    {v:"prof",t:"Определиться с профессией",m:{light:["prof","qa"],mid:["prof","bachBase"],full:["prof","bachFull"]}},
+    {v:"events",t:"Форумы и конференции для портфолио",m:{light:["events","qa"],mid:["events","eventsFull"],full:["eventsFull","events"]}}
+  ],
+  student:[
+    {v:"job",t:"Стажировка или первая работа",m:{light:["consult","interview"],mid:["consult1","cv"],full:["mentor","consult1"]}},
+    {v:"mag",t:"Магистратура в России",m:{light:["magSelect","consult"],mid:["magSelect","portfolioPack"],full:["magFull","magSelect"]}},
+    {v:"abroad",t:"Учёба или обмен за рубежом",m:{light:["consult","abroad"],mid:["abroad","portfolioPack"],full:["abroad","mentor"]}},
+    {v:"forums",t:"Форумы, гранты, конференции",m:{light:["consult","consult1"],mid:["consult1","consultMulti"],full:["mentor","subscription"]}},
+    {v:"docs",t:"Резюме и документы",m:{light:["cv","cover"],mid:["portfolioPack","cvPortfolio"],full:["mentor","portfolioPack"]}},
+    {v:"all",t:"Всё сразу: карьера и академ",m:{light:["consultMulti","consult"],mid:["consultMulti","mentor"],full:["mentor","subscription"]}},
+    {v:"ai",t:"Освоить ИИ для заявок и учёбы",m:{light:["ai","consult"],mid:["ai","mentor"],full:["mentor","ai"]}}
+  ],
+  pro:[
+    {v:"job",t:"Новая работа или смена сферы",m:{light:["consult","interview"],mid:["consultMulti","cv"],full:["mentor","subscription"]}},
+    {v:"docs",t:"Резюме, сопроводительное, портфолио",m:{light:["cv","cover"],mid:["cvPortfolio","cv"],full:["portfolioPack","consult"]}},
+    {v:"interview",t:"Пройти собеседование",m:{light:["interview","cv"],mid:["interview","consult"],full:["mentor","interview"]}},
+    {v:"mag",t:"Магистратура в России или за рубежом",m:{light:["magSelect","abroad"],mid:["magSelect","portfolioPack"],full:["magFull","abroad"]}},
+    {v:"ai",t:"Внедрить ИИ в работу и заявки",m:{light:["ai","consult"],mid:["ai","consultMulti"],full:["mentor","ai"]}}
+  ],
+  biz:[
+    {v:"edu",t:"Образование как актив",s:"магистратура или программа в РФ и за рубежом",m:{light:["bizEdu","bizBrand"],mid:["bizEdu","bizIntl"],full:["bizEdu","bizIntl"]}},
+    {v:"brand",t:"Личный бренд",s:"позиционирование, контент, выступления",m:{light:["bizBrand","bizIntl"],mid:["bizBrand","bizEdu"],full:["bizBrand","bizIntl"]}},
+    {v:"intl",t:"Международные возможности",s:"нетворкинг и выход на глобальный уровень",m:{light:["bizIntl","bizBrand"],mid:["bizIntl","bizEdu"],full:["bizIntl","bizEdu"]}}
+  ]
+};
+const DEPTH=[
+  {v:"light",t:"Разобраться за одну встречу",s:"нужен понятный план и ответы"},
+  {v:"mid",t:"Подборка и помощь с подачей",s:"готовый список, документы, отклик вместе"},
+  {v:"full",t:"Вести меня до результата",s:"сопровождение, куратор, чат"}
+];
+const Q=[
+  {title:"Кто ты?",hint:"От ответа зависят следующие вопросы."},
+  {title:"Какая главная цель?",hint:"Выбери то, что важнее всего сейчас."},
+  {title:"Какой формат нужен?",hint:"Подскажет, насколько глубоко работать."}
+];
+const st={step:0,role:null,goal:null,depth:null};
+const qMain=document.getElementById("qMain"), qStep=document.getElementById("qStep"), qTitle=document.getElementById("qTitle"), qHint=document.getElementById("qHint"), qBar=document.getElementById("qBar");
+function opt(o,i){return `<button class="opt" type="button" data-v="${o.v}"><span class="k">${String.fromCharCode(65+i)}</span><span>${esc(o.t)}${o.s?`<small>${esc(o.s)}</small>`:""}</span></button>`}
+function side(n,title,hint){
+  qStep.textContent=n<3?`Вопрос ${n+1} из 3`:"Твой результат";
+  qTitle.textContent=title; qHint.textContent=hint;
+  qBar.querySelectorAll("i").forEach((el,i)=>el.classList.toggle("on",i<=Math.min(n,2)));
+}
+function render(){
+  if(st.step>=3) return result();
+  side(st.step,Q[st.step].title,Q[st.step].hint);
+  const list=st.step===0?ROLES:st.step===1?GOALS[st.role]:DEPTH;
+  qMain.innerHTML=`<div class="opts">${list.map(opt).join("")}</div>
+    <div class="q-nav">${st.step>0?`<button class="linkbtn" type="button" id="back">← Назад</button>`:"<span></span>"}<span class="note">${st.step+1} / 3</span></div>`;
+  qMain.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
+    const v=b.dataset.v;
+    if(st.step===0) st.role=v; else if(st.step===1) st.goal=v; else st.depth=v;
+    st.step++; render();
+  }));
+  const back=document.getElementById("back"); if(back) back.addEventListener("click",()=>{st.step--; render();});
+}
+function result(){
+  const role=ROLES.find(r=>r.v===st.role), goal=GOALS[st.role].find(g=>g.v===st.goal), depth=DEPTH.find(d=>d.v===st.depth);
+  const [mainId,altId]=goal.m[st.depth]; const m=byId[mainId], a=byId[altId];
+  side(3,"Готово: вот твой формат",`${role.t} · ${goal.t.toLowerCase()} · ${depth.t.toLowerCase()}`);
+  const msg=`Здравствуйте! Я прошёл(ла) подбор услуги на сайте EMPOWER. Мне подошла услуга «${m.t}». Кто я: ${role.t.toLowerCase()}. Цель: ${goal.t.toLowerCase()}. Хочу обсудить детали.`;
+  qMain.innerHTML=`
+    <div class="res-main">
+      <p class="res-label">Тебе подходит</p>
+      <h3>${esc(m.t)}</h3>
+      <p class="price">${esc(m.p)}${m.pn?` <span class="note" style="font-family:var(--display)">${esc(m.pn)}</span>`:""}</p>
+      <p>${esc(m.d)}</p>
+      <ul class="arr">${m.inc.slice(0,4).map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
+    </div>
+    <div class="res-alt"><span>Альтернатива:</span><b>${esc(a.t)}</b><span>${esc(a.p)}</span></div>
+    <div class="res-alt"><span>Бонусом к любому треку:</span><b>EMPOWER Opportunities</b><span>693 ₽ первый месяц</span></div>
+    <div class="res-cta">
+      <a class="btn btn-red" href="${TG}" target="_blank" rel="noopener">Записаться в Telegram →</a>
+      <button class="btn btn-line" type="button" id="copyBtn">Скопировать запрос</button>
+    </div>
+    <textarea class="copy-text" id="copyText" rows="4" readonly>${esc(msg)}</textarea>
+    <p class="note" id="copyNote">Скопируй запрос и вставь его в сообщение, так мы сразу поймём твою цель.</p>
+    <div class="q-nav"><button class="linkbtn" type="button" id="back">← Изменить ответ</button><button class="linkbtn" type="button" id="restart">Пройти заново ↺</button></div>`;
+  document.getElementById("back").addEventListener("click",()=>{st.step=2; render();});
+  document.getElementById("restart").addEventListener("click",()=>{Object.assign(st,{step:0,role:null,goal:null,depth:null}); render();});
+  document.getElementById("copyBtn").addEventListener("click",()=>{
+    const note=document.getElementById("copyNote"), ta=document.getElementById("copyText");
+    const fallback=()=>{ta.style.display="block"; ta.focus(); ta.select(); note.textContent="Выделили текст: скопируй его и отправь нам.";};
+    try{ navigator.clipboard.writeText(msg).then(()=>{note.textContent="Скопировано. Открой Telegram и вставь сообщение.";},fallback); }catch(e){fallback()}
+  });
+}
+render();
+
+/* блокнот на первом экране */
+const heroNb=document.getElementById("heroNb");
+document.getElementById("nbOpts").innerHTML=ROLES.map(r=>`<button type="button" data-v="${r.v}"><i></i>${esc(r.t)}</button>`).join("");
+document.getElementById("nbCover").addEventListener("click",()=>heroNb.classList.add("open"));
+document.getElementById("nbClose").addEventListener("click",()=>heroNb.classList.remove("open"));
+document.querySelectorAll("#nbOpts button").forEach(b=>b.addEventListener("click",()=>{
+  Object.assign(st,{step:1,role:b.dataset.v,goal:null,depth:null}); render();
+  document.getElementById("test").scrollIntoView();
+}));
+</script>
+
+</body>
+</html>
